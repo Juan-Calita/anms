@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: anamnes-ia
+    runtime: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: ANTHROPIC_API_KEY
+        sync: false          # você preenche no dashboard do Render
+      - key: NODE_ENV
+        value: production
